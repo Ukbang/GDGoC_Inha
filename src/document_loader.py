@@ -39,6 +39,10 @@ def generate_title_and_summary(document_text:str, model:str="gpt-4o-mini", tempe
 
 def create_retriever(loader: BaseLoader, chunk_size: int=300, chunk_overlap: int=50):
 
+    """
+    로드된 파일만 제공되면 제목과 요약 생성 후 리트리버를 생성해주는 모듈
+    """
+
     Embeddings = OpenAIEmbeddings()
 
     # 텍스트 스플리터 생성
